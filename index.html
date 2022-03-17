@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./imagens/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&family=Poppins:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="css/jquery.convform.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chat.css">
+    <title>Centro de Diagonóstico Laboratorial-Viana</title>
+</head>
+<body>
+    <!---------------------ChatBot--------------------------->
+    <div class="chat_icon">
+        <i class="fas fa-comment-alt"></i>
+    </div>
+
+    <div class="chat_box">
+        <div class="conv-form-wrapper">
+            <form action="" method="GET" class="hidden">
+
+                <select name="category" data-conv-question="Olá! podemos ajudá-lo?">
+                    <option value="suspetaDecovid">Suspeita de covid-19?</option>
+                    <option value="testeDecovid?">Sobre os teste?</option>
+                </select>
+                <div data-conv-fork="category">
+                    <div data-conv-case="suspeita de covid-19?">
+                        <input type="text" name="escolha_uma_opcao"data-conv-question="por favor escolha uma opcao">
+                    </div>
+
+                    <div data-conv-case="testeDecovid?">
+                        <input type="text" name="podemos_ajudar" data-conv-question="Como podemos ajudar?">
+                    </div>
+                </div>
+
+                <input type="text" name="nome" data-conv-question="Por favor, o seu nome">
+                <input data-conv-question="Por favor, o seu e-mail" data-pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" id="email" type="email" name="email" required placeholder="What's your e-mail?">
+                <select data-conv-question="Confirma ?">
+                    <option value="suspetaDecovid">Confirma</option>
+                </select>
+
+            </form>
+        </div>
+    </div>
+
+    <!---------------------HEADER---------------------------->
+    <section class="header">
+            <nav>
+                <a href="index.html"><img src="./imagens/logo.png" alt="CDLV"></a>
+                <div class="search-box">
+                    <input type="text" class="search-text" placeholder="Pesquisar" id="">
+                    <a href="#" class="search-btn"><i class="fa fa-search"></i></a>
+                </div>
+                <div class="nav_links" id="navLinks">
+                    <i class="fas fa-times" onclick="hideMenu()"></i>
+                    <ul>
+                        <li class="active"><i class="fa fa-home"></i><a href="">Home</a></li>
+
+                        <li><i class="fa fa-users"></i><a href="">Sobre nós</a>
+
+                            <div class="sub-menu-1">
+                                <ul>
+                                    <li><a href="#">Misão</a></li>
+                                    <li><a href="#">Visão</a></li>
+                                    <li><a href="#">Valores</a></li>
+                                </ul>
+                            </div>
+                        
+                        </li>
+                        <li><i class="fa fa-edit"></i><a href="">Informações</a>
+
+                            <div class="sub-menu-1">
+                                <ul>
+                                    <li><a href="#">Testes</a></li>
+                                    <li><a href="#">Covi-19</a></li>
+                                    <li><a href="#">Estado de Emergência</a></li>
+                                </ul>
+                            </div>
+                        
+                        </li> 
+                        <li><i class="fa fa-newspaper"></i><a href="">Notícias</a></li>
+                        <li><i class="fa fa-phone"></i><a href="">Contacto</a></li>
+                    </ul>
+                </div>
+                <i class="fas fa-bars" onclick="showMenu()"></i>
+            </nav>
+
+
+        <div class="caixa-texto">
+            <h1>Bem-vindo ao CDLV</h1>
+            <p>Seja bem-vindo a página do Centro de Diagonóstico <br>Laboratorial de Laboratorial-Viana. Aqui você tem<br> toda informação que precisa sobre o covid 19</p>
+            <a href="" class="cont-btn1">Saber mais</a>
+        </div>
+
+    </section>
+    <br>
+    <br>
+    
+    <!--------------Sessão de Notícias ---------------------->
+    <section class="area-noticias">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="section_title">
+                        <div class="section_subtitle">Notícias</div>
+                        <h2>Saiba tudo sobre o convid-19  e fique a par de tudo que acontece. Esteja informado!</h2>
+                        <a href="#">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+        <br><br>
+        <div class="row">
+            <div class="news-active">
+                <div class="col-md-4">
+                    <div class="latest-news-wrap">
+                        <div class="news-image">
+                            <img src="./imagens/noticia1.jpg" class="imagen-responsiv">
+                        </div>
+                        <div class="news-contant">
+                            <div class="slide-date">30/04/2021</div>
+                            <h2>Estado de emergência</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. unde ut, non suscipit labore tenetur architecto vel facere in? 
+                            </p>
+                            <a href="#">Leia mais</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="latest-news-wrap">
+                        <div class="news-image">
+                            <img src="./imagens/noticia3.jpg" class="imagen-responsiv">
+                        </div>
+                        <div class="news-contant">
+                            <div class="slide-date">30/04/2021</div>
+                            <h2>O que é a covid-19? Saiba tudo!</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. unde ut, non suscipit labore tenetur architecto vel facere in? 
+                            </p>
+                            <a href="#">Leia mais</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="latest-news-wrap">
+                        <div class="news-image">
+                            <img src="./imagens/noticia2.jpg" class="imagen-responsiv">
+                        </div>
+                        <div class="news-contant">
+                            <div class="slide-date">30/04/2021</div>
+                            <h2>Sobre a vacina, saiba tudo!</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. unde ut, non suscipit labore tenetur architecto vel facere in? 
+                            </p>
+                            <a href="#">Leia mais</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-----------------Informação--------------------------->
+    <section class="inform">
+
+    <div class="slider">
+        <div class="slider-wrapper flex">
+            <div class="slide flex">
+                <div class="slide-image slider-link prev"><img src="./imagens/silder1.jpg"><div class="overlay"></div></div>
+                <div class="slide-content">
+                    <div class="slide-date">30/04/2021</div>
+                    <div class="slide-title">Sobre a convid-19</div>
+                    <div class="slide-text">Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex.<br>
+                    Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex. </div>
+                    <div class="slide-more"><a href="#">
+                        Saiba mais</a></div>
+                </div>	
+            </div>
+            <div class="slide flex">
+                <div class="slide-image slider-link next"><img src="./imagens/silder1.jpg"><div class="overlay"></div></div>
+                <div class="slide-content">
+                    <div class="slide-date">30/04/2021</div>
+                    <div class="slide-title">Sobre a vacina</div>
+                    <div class="slide-text">Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex.<br>
+                    Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex.</div>
+                    <div class="slide-more"><a href="#">
+                        Saiba mais</a></div>
+                </div>	
+            </div>	
+            <div class="slide flex">
+                <div class="slide-image slider-link next"><img src="./imagens/silder1.jpg"><div class="overlay"></div></div>
+                <div class="slide-content">
+                    <div class="slide-date">30/04/2021</div>
+                    <div class="slide-title">Sobre os teste</div>
+                    <div class="slide-text">Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex. <br>
+                    Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex. </div>
+                    <div class="slide-more"><a href="#">
+                        Saiba mais</a></div>
+                </div>	
+            </div>
+                <div class="slide flex">
+                    <div class="slide-image slider-link next"><img src="./imagens/silder1.jpg">
+                    <div class="overlay"></div>
+                </div>
+
+                <div class="slide-content">
+                    <div class="slide-date">30/04/2021</div>
+                    <div class="slide-title">Isolamento</div>
+                    <div class="slide-text">Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex.<br>
+                    Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex. </div>
+                    <div class="slide-more"><a href="#">
+                        Saiba mais</a></div>
+                </div>	
+            </div>
+
+            <div class="slide flex">
+                <div class="slide-image slider-link next"><img src="./imagens/silder1.jpg">
+                <div class="overlay"></div>
+            </div>
+
+            <div class="slide-content">
+                <div class="slide-date">30/04/2021</div>
+                <div class="slide-title">LOREM IPSUM DOLOR SITE MATE, AD EST ABHORREANT</div>
+                <div class="slide-text">Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex. 
+                Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex.
+                </div>
+                <div class="slide-more"><a href="#">
+                    Saiba mais</a></div>
+            </div>	
+        </div>
+
+        </div>
+            <div class="arrows">
+            <a href="#" title="Previous" class="arrow slider-link prev"></a>
+            <a href="#" title="Next" class="arrow slider-link next"></a>
+            </div>
+        </div>
+
+    </section>
+
+
+      <!-----------------Serviços--------------------------->
+    <section class="servicos">
+        <h1>Nossos principais serviços</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni quod aut tempore.</p>
+        <div class="servicos-contant">
+        <div class="row1">
+            <div class="servico-col">
+                <img src="./imagens/servico2.png" alt="">
+                <h3>Teste RT-PCR</h3>
+                <p>RT-PCR (do inglês reverse-transcriptase polymerase chain reaction), é considerado o padrão-ouro no diagnóstico da COVID-19.</p>
+                <a href="#">Leia mais</a>
+            </div>
+
+            <div class="servico-col">
+                <img src="./imagens/servico4.png" alt="">
+                <h3>Teste Rápito</h3>
+                <p>RT-PCR (do inglês reverse-transcriptase polymerase chain reaction), é considerado o padrão-ouro no diagnóstico da COVID-19.</p>
+                <a href="#">Leia mais</a>
+            </div>
+
+            <div class="servico-col">
+                <img src="./imagens/servico3.png" alt="">
+                <h3>Teste Sorologia</h3>
+                <p>RT-PCR (do inglês reverse-transcriptase polymerase chain reaction), é considerado o padrão-ouro no diagnóstico da COVID-19.</p>
+                <a href="#" class="link-mais">Leia mais</a>
+            </div>
+        </div>
+    </div>
+
+    </section>
+
+      <!-----------------Footer--------------------------->
+      <footer>
+          <div class="containerfoot">
+              <div class="sec-sobre">
+                  <img src="./imagens/logo.png" alt="">
+                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique soluta tempore pariatur harum! Non recusandae, exercitationem laudantium laboriosam magnam nam.<br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa repudiandae iure labore qui, omnis numquam quae eius itaque obcaecati, quia, in earum atque et ullam tempora modi blanditiis provident nemo.</p>
+
+                <ul class="social">
+                  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="#"><i class="fab fa-whatsapp"></i></i></a></li>
+                  <li><a href="#"><i class="fab fa-facebook-messenger"></i></a></li>
+                  <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                  <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+              </div>
+
+              <div class="sec-links">
+                  <h2>Links Rápido</h2>
+                  <ul>
+                      <li><a href="#">Sobre nós</a></li>
+                      <li><a href="#">Informação sofdofdjfid</a></li>
+                      <li><a href="#">Ntícias mais lindas</a></li>
+                      <li><a href="#">Mais Lorem ipsum dolor sit amet.</a></li>
+                      <li><a href="#">Sobre nós</a></li>
+                      <li><a href="#">Informação</a></li>
+                      <li><a href="#">Ntícias</a></li>
+                      <li><a href="#">Mais Lorem ipsum dolor sit amet. </a></li>
+                  </ul>
+              </div>
+
+              <div class="contact">
+                  <h2>Entre em Contacto</h2>
+                  <ul class="inform">
+                      <li>
+                          <span><i class="fas fa-map-marker-alt"></i></span>
+                          <span>ZEE, viana, Luanda, Angola</span>
+                      </li>
+
+                    <li><span><i class="fas                       fa-phone-square"></i></span>
+                    <p><a href="tel:900909090">+244 900 900 900</a><br><a href="tel:900909090">+244 900 900 900</a></p>
+                        
+                    </li>
+
+                    <li>
+                        <span><i class="fas fa-envelope-square"></i></span>
+                        <p><a href="mailto:geral.cdlv@gmail.com">geral.cdlv@gmail.com</a></p>
+                    </li>
+
+                  </ul>
+              </div>
+             
+          </div>
+        </div>
+       
+      </footer>
+
+      <div class="compritext">
+        <p>Copyright &copy; 2021 CDLV. Todos os Direitos Reservados</p>
+    </div>
+    
+
+    <!--------------JavaScript Section----------------------->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+
+    <script src="./js/main.js"></script>
+
+     <!--------------ChatBot----------------------->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script src="./js/chat.js"></script>
+     <script rel="stylesheet" type="text/css" href="css/jquery.convform.css"></script>
+     <script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
+     <script type="text/javascript" src="./js/custom.js"></script>
+     <script type="text/javascript" src="./js/jquery.convform.js"></script>
+
+    <script>
+        var navLinks = document.getElementById("navLinks");
+
+        function showMenu (){
+            navLinks.style.right = "0"
+        }
+        function hideMenu(){
+            navLinks.style.right = "-250px"
+        }
+    </script>
+
+</body>
+</html>
